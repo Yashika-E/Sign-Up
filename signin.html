@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signin.css">
+    <title>Sign In</title>
+</head>
+<body>
+    <div class="box">
+    <h1>Login</h1>
+    <form id="signinForm">
+        <div class="name">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="password">
+            <label for="password">Password:</label>
+            <input type="password" id="name" name="password" placeholder="Enter your password" required>
+        </div>
+        
+        <button type="button" onclick="submitForm()">Login</button>
+        <p>Don't have an account? <a href="signup.html" >SignUp</a></p>   
+    </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            const form = document.getElementById('signinForm');
+            // Perform form validation or any other logic here if needed
+            if (form.checkValidity()) {
+                window.location.href = "fin.html"; // Replace with the actual URL of the next page
+            } else {
+                form.reportValidity();
+            }
+        }
+    </script>
+</body>
+</html>

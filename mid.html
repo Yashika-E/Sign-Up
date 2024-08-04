@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign Up</title>
+    <style>
+        p{
+            color: rgb(29, 89, 173);
+        }
+        marquee p{
+            color: rgb(181, 29, 204);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <h1>Confirmation Page</h1>
+    <form id="signinForm">
+    <p>Signup successful!!<marquee>
+        <p>Click on login to signin to your account.</p>
+    </marquee> </p>
+     
+        <button type="button" onclick="submitForm()">Login</button>
+           
+    </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            const form = document.getElementById('signinForm');
+            // Perform form validation or any other logic here if needed
+            if (form.checkValidity()) {
+                window.location.href = "signin.html"; // Replace with the actual URL of the next page
+            } else {
+                form.reportValidity();
+            }
+        }
+    </script>
+</body>
+</html>
